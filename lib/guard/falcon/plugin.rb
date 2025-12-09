@@ -60,6 +60,7 @@ module Guard
 			
 			def start
 				Console.info(self, "Starting...")
+				@controller.stop if running?
 				@controller.start
 			end
 			
